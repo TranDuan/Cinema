@@ -113,7 +113,7 @@ class Payment extends Component {
 
                             }} className='i'>Thanh Toán</button> <br />
                         </div>
-                        <p style={{textAlign:'center',width:'85%',color:'gray'}}>{
+                        <p style={{textAlign:'center',width:'85%',color:'red'}}>{
                             this.props.PayR.lsInfoPay  &&  this.props.PayR.lsInfoPay.status === 200 ? "Thanh toán thành công" : ""}</p>
 
                     </div>
