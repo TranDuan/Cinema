@@ -124,7 +124,7 @@ class Food extends Component {
                                 }
                                 } className='boxdau buttonnone'><div className='dau'><p className='daucongp'>+</p></div></button>
                             </div>
-                            <div className='price'><p className='pricep'>80000</p></div>
+                            <div className='price'><p className='pricep'>80.000</p></div>
                             <div className='total'><p className='totalp'>{this.state.total}</p></div>
                         </div>
 

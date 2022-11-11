@@ -26,7 +26,7 @@ class Login extends Component {
     }
     return (
       <div className='login'>
-        {console.log(this.props.UserLogin)}
+        {/* {console.log(this.props.UserLogin)} */}
         <p className='content-login'>Vui lòng đăng nhập trước khi mua vé để tích luỹ điểm, cơ hội nhận thêm nhiều ưu đãi từ chương trình thành viên Galaxy Cinema.</p>
         <input name='email' onChange={(event) => HandleInput(event)} className='email' placeholder='Email' />
         <input name='password' type={"password"} onChange={(event) => HandleInput(event)} className='password' placeholder='Password' />
@@ -43,6 +43,7 @@ class Login extends Component {
         {this.props.UserLogin.lsUserLogin &&
          this.props.UserLogin.lsUserLogin.status === 404 ? <strong style={{color:"red"}}>Enail hoặc Password của bạn bị sai !!! </strong> : ""
         }
+        {/* {console.log(this.props.UserLogin)} */}
       </div>
     )
   }

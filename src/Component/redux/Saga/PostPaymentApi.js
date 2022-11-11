@@ -13,7 +13,7 @@ async function PaymentAPI(pay) {
             body: JSON.stringify(pay.pay)
         }
     )
-    console.log(res.status)
+    // console.log(res.status)
 
     var status = res.status;
     return {status}

@@ -15,7 +15,7 @@ import HotMovie from './Component/Event/HotMovie/HotMovie';
 import CinemaPrice from './Component/CinemaPrice/CinemaPrice';
 import Support from './Component/Support/Support';
 import Member from './Component/Member/Member';
-import Slider from './Component/Home/Slider/Slider';
+// import Slider from './Component/Home/Slider/Slider';
 import LogIn from './Component/LogIn/LogInBox';
 import Footer from './Component/Footer/Footer';
 import BoxNav from './Component/BoxNav/BoxNav';

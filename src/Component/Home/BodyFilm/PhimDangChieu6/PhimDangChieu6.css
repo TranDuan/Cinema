@@ -22,7 +22,7 @@
 .body-phimdangchieu .body-box .left1{
     background-color: rgb(239, 237, 237);
     width: 300px;
-    height: 220px;
+    height: 240px;
     display: flex; 
     flex-direction: column;
     margin-bottom: 10px;

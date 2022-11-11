@@ -5,7 +5,7 @@ async function DetailCineAPI(Cineplex,day, idFilm) {
     // console.log(Cineplex,day, idFilm);
     var res = await fetch(`${SERVER}movie/schedule?apiFilmId=${idFilm}&date=${day}&cineplex=${Cineplex}`)
     var dataselect = await res.json()
-    // console.log(dataselect);
+    console.log(dataselect);
     return dataselect
 }
 export default function* getSelectCine({ payload }) {

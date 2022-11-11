@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import './BoxRightDetail.css'
 import { connect } from 'react-redux/es/exports'
-import {
-  Link
-} from "react-router-dom";
+// import {
+//   Link
+// } from "react-router-dom";
 class BoxRightDetail extends Component {
   constructor(props) {
     super();
@@ -110,7 +110,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     NowSoonFunc: (val) => {       //funcion để chạy API
       dispatch({ type: "GetNowSoonSaga", payload: val })
     },
-    IdMovieFunc: (apiFim, date) => {
+    IdMovieFunc: (apiFim, date) => { 
+      // lấy id film và ngày để show lại chi tiết phim khi nhấn chọn xem phim khác
       dispatch({ type: "GetIdMovieSaga", payload: [apiFim, date] })
     }
   }

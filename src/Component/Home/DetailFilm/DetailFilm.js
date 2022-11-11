@@ -108,6 +108,7 @@ class DetailFilm extends Component {
         }
         return (
             <div className='detailfilm'>
+               {console.log(this.props.detailmovie)}
                 <div className='detailfilm-left mgR mgT20' >
 
                     {
@@ -161,7 +162,6 @@ class DetailFilm extends Component {
                     }
                     {/* <p className='seemore'>Xem thêm</p> */}
                     <p className='showtimes'>LỊCH CHIẾU</p>
-
                     {/* select */}
 
                     <div className='boxinput'>
@@ -169,7 +169,7 @@ class DetailFilm extends Component {
                             HandleCineplex(event)
                             this.props.GetdatePayFunc(this.state.day)
                             this.props.GetapiCinemaIdPayFunc(event.target.value)
-                            console.log(event.target.name)
+                            // console.log(event.target.name)
                             
                         }}>
                             <option hidden>Chọn Cụm Rạp</option>
@@ -237,8 +237,6 @@ class DetailFilm extends Component {
 
                         {/* Bình luận */}
                         <div className='Comment'>
-
-
                             <h3 className='mgB10'>BÌNH LUẬN</h3>
                             <div className='boxCMT' >
                                 {this.props.detailmovie.lsdetailCommentMovie &&
@@ -277,14 +275,7 @@ class DetailFilm extends Component {
                         </div>
                     </div>
                 </div>
-                {
-                    console.log(this.state)
-                }
-                {
-                    this.props.detailmovie &&
-                    console.log(this.props.detailmovie.lsdetailMovie)
-                }
-                {/* Bên phải */}
+              
                 <div className='x'>
                     <BoxRightDetail />
                 </div>
@@ -315,37 +306,48 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         //     dispatch({ type: "GetIdMovieSaga", payload: val })
         // },
         HandleCineplexFunc: (cinePlex, day, idFilm) => {
+            // truyền id cum rap, ngay , ten film và lấy về danh sách các rạp chiếu và suất chiếu của từng rap theo cụm rạp đã chọn
             dispatch({ type: "GetCinePlexsagadetail", payload: { cinePlex: cinePlex, day: day, idFilm: idFilm } })
         },
         HandleDayFunc: (cinePlex, day, idFilm) => {
+            // truyền id cum raho ngày  id film để lấy về danh sash các rạp và suất chiếu theo ngày mình đã chọn
             dispatch({ type: "GetDaySaga", payload: { cinePlex: cinePlex, day: day, idFilm: idFilm } })
         },
         GetcineplexPayFunc: (val) => {
+            // lấy  id rạp
             dispatch({ type: "GetcineplexPay", payload: val })
         },
         GetapiCinemaIdPayFunc: (val) => {
+            // lấy tên cụm rạp (CGV, BHD)
             dispatch({ type: "GetapiCinemaIdPay", payload: val })
         },
         GetapiFilmIdPayFunc: (val) => {
+            // lấy tên film
             dispatch({ type: "GetapiFilmIdPay", payload: val })
         },
         GetdatePayFunc: (val) => {
+            //lấy ngày
             dispatch({ type: "GetdatePay", payload: val })
         },
 
         GettimeFilmPayFunc: (val) => {
+            //lấy suất chiếu
             dispatch({ type: "GettimeFilmPay", payload: val })
         },
         GettitleFilmFunc: (val) => {
+            //lấy tên film
             dispatch({ type: "GettitleFilm", payload: val })
         },
-        GetbannerFilmPayFunc: (val) => {
+        GetbannerFilmPayFunc: (val) => { 
+            // lấy banner film
             dispatch({ type: "GetbannerFilmPay", payload: val })
         },
         GetNameCineplexPayFunc: (val) => {
+            // lấy tên rạp
             dispatch({ type: "GetNameCineplexPay", payload: val })
         },
         GetAgeAblePayFunc: (val) => {
+            // lấy độ tuổi 
             dispatch({ type: "GetAgeAblePay", payload: val })
         },
 

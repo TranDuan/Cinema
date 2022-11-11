@@ -63,6 +63,8 @@ class Register extends Component {
                 {this.props.UserRegister.lsRegisterUser &&
                     this.props.UserRegister.lsRegisterUser.status === 404 ? <strong style={{color:"red"}}>Vui lòng đăng ký lại tài khoản khác</strong> : ""
                 }
+                {console.log(this.props.UserRegister.lsRegisterUser &&
+                    this.props.UserRegister.lsRegisterUser)}
             </form>
 
         )

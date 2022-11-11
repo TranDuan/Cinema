@@ -30,22 +30,11 @@ import { connect } from 'react-redux'
 }
 const mapStateToProps = (state, ownProps) => {
   return {
-    nowsoon: state.nowsoon,
-    movieToCinema: state.movieToCinema,
-    UserRegister: state.UserRegister,
-    UserLogin: state.UserLogin,
     PayR: state.PayR
   }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    GetseatCodePayFunc: (val) => {
-      dispatch({ type: "GetseatCodePay", payload: val })
-    },
-
-
-
-
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(FormPayment)

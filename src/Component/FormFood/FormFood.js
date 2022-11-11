@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import "./FormFood.css"
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import { connect } from 'react-redux'
 
 class FormFood extends Component {
     render() {
         return (
             <div className='body-food'>
+                 {console.log(this.props.PayR)}
                 <div className='form-img'>
                     <div className='img' >
                         <img alt='a' src={this.props.PayR.bannerFilm} />
@@ -26,13 +27,12 @@ class FormFood extends Component {
                 <div className='continute'><Link to='/ChooseChair'><button onClick={() => this.props.GettotalPayFunc(this.props.totalForm)}>Tiếp tục </button></Link></div>
 
             </div>
+           
         )
     }
 }
 const mapStateToProps = (state, ownProps) => {
     return {
-        UserRegister: state.UserRegister,
-        UserLogin: state.UserLogin,
         PayR: state.PayR
     }
 }

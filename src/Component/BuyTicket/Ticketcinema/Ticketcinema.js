@@ -247,6 +247,8 @@ class Ticketcinema extends Component {
         <div className='TicketcinemaItem'>
           <div className='TicketcinemaTitle'>
             <p>CHỌN SUẤT</p>
+            {console.log(this.state.TimeWatch
+            )}
           </div>
           {
             this.state.TimeWatch.length > 0 &&
@@ -281,10 +283,7 @@ const mapStateToProps = (state, ownProps) => {
     cinema: state.cinema,
     cineplex: state.cineplex,
     movie: state.Movie,
-    movieToCinema: state.movieToCinema,
-    UserRegister: state.UserRegister,
     UserLogin: state.UserLogin,
-    PayR: state.PayR
   }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
@@ -310,8 +309,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     GetdatePayFunc: (val) => {
       dispatch({ type: "GetdatePay", payload: val })
     },
-
-
     GettimeFilmPayFunc: (val) => {
       dispatch({ type: "GettimeFilmPay", payload: val })
     },

@@ -8,9 +8,7 @@ const LoginState = {
     date: "",
     Combo: "",
     CountTicket: "",
-
     totalPay: "",
-
     timeFilmPay: "",
     titleFilm: "",
     bannerFilm: "",

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "./FormTicket.css"
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
 
 class FormTicket extends Component {
@@ -13,7 +13,6 @@ class FormTicket extends Component {
           </div>
         </div>
         <div className='nameFilm'>{this.props.PayR.titleFilm}</div>
-        {/* <div className='nameFilmEn'>BLACK ADAM</div> */}
         <div className='age'>
           <div className='age-left'>{this.props.PayR.AgeAble}</div>
           <div className='age-right'>(*)Phim chỉ dành cho khán giả từ {this.props.PayR.AgeAble}</div>
@@ -24,31 +23,17 @@ class FormTicket extends Component {
         <div className='ghe mgb10'><div className='first'>Ghế:</div><div className='final'>{this.props.PayR.seatCode.join(',')}</div></div>
         <div className='tong mgb10'><div className='first'>Tổng:</div><div className='finaly'>{this.props.PayR.totalPay}</div></div>
         <div className='continute'> <Link to="/Payment"><button>Tiếp tục</button></Link></div>
-        {
-          console.log(this.props.PayR)
-        }
       </div>
     )
   }
 }
 const mapStateToProps = (state, ownProps) => {
   return {
-    nowsoon: state.nowsoon,
-    movieToCinema: state.movieToCinema,
-    UserRegister: state.UserRegister,
-    UserLogin: state.UserLogin,
     PayR: state.PayR
   }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    GetseatCodePayFunc: (val) => {
-      dispatch({ type: "GetseatCodePay", payload: val })
-    },
-
-
-
-
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(FormTicket)

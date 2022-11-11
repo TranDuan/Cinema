@@ -264,6 +264,7 @@ class Ticketmovie extends Component {
           </div>
 
         </div>
+        
       </div>
     )
   }

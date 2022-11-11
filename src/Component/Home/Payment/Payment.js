@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import './Payment.css'
 import { connect } from 'react-redux'
-import FormTicket from '../FormTicket/FormTicket';
-import FormFood from '../../FormFood/FormFood';
 import FormPayment from '../../FormPayMent/FormPayment';
 
 class Payment extends Component {
@@ -127,8 +125,6 @@ class Payment extends Component {
 }
 const mapStateToProps = (state, ownProps) => {
     return {
-        UserRegister: state.UserRegister,
-        UserLogin: state.UserLogin,
         PayR: state.PayR
     }
 }
@@ -136,10 +132,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         GetPaymentAPISagaFunc: (pay) => {
             dispatch({ type: "GetPaymentAPISaga", payload: { pay: pay } })
-        },
-        MovieFunc: (CinemaId, keyId, dateApi) => {
-            dispatch({ type: "GetMovieSaga", payload: { CinemaId: CinemaId, keyId: keyId, dateApi: dateApi } })
-        },
+        }
 
 
     }

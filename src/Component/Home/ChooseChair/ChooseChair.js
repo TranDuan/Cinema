@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import FormTicket from '../FormTicket/FormTicket';
 import './ChooseChair.css'
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-// import IMGCombo from './imgcombo.png'
-import IMGcuoi from './imgcuoi.png'
+
 import { connect } from 'react-redux/es/exports'
 
 class ChooseChair extends Component {
@@ -30,8 +28,6 @@ class ChooseChair extends Component {
         return (
             //LEFT
             <div className='ChooseChair'>
-                <div className='.tet_left'><img src='' /></div>
-                <div className='.tet_right'></div>
                 <div className='ChooseChair-left'>
                     <div className='ChooseChair-left-top'>CHỌN GHẾ</div>
                     <div className='ChooseChair-left-bottom'>
@@ -66,9 +62,7 @@ class ChooseChair extends Component {
                     </div>
                 </div>
                 <FormTicket />
-                {
-                    console.log(this.props.PayR)
-                }
+                
             </div>
         )
     }

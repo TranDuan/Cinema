@@ -7,6 +7,6 @@ async function movieAPI(CinemaId,keyId,dateApi) {
 }
 export default function* getMovie({ payload }) {
     var lsGetMOvie = yield call(movieAPI, payload.CinemaId,payload.keyId,payload.dateApi)
-    console.log(lsGetMOvie)
+    // console.log(lsGetMOvie)
     yield put({ type: "GetMovie", payload: lsGetMOvie })
 }

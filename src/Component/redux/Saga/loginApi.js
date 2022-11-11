@@ -17,6 +17,7 @@ async function UserLoginUpdateAPI(acc) {
     )
     var status = res.status;
     return { acc, status }
+
 }
 
 export default function* getLoginUpdateDataUser({ type, payload }) {
